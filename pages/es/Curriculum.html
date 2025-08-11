@@ -18,6 +18,62 @@
     -->
 
     <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5DJHTQZZD8"></script>
+    <script>
+    // GA4 initialization
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-5DJHTQZZD8');
+
+    // ----------- CUSTOM TRACKING -----------
+
+    // Track CV PDF downloads
+    function bindCvDownloadTracking() {
+        const links = Array.from(document.querySelectorAll('a[href$=".pdf"], a[download]'));
+        links.forEach(a => {
+        a.addEventListener('click', () => {
+            const lang = location.pathname.includes('/es/') ? 'es' :
+                        location.pathname.includes('/en/') ? 'en' : 'unknown';
+            gtag('event', 'download_cv', {
+            file_name: (a.getAttribute('href') || '').split('/').pop() || 'unknown',
+            page_path: location.pathname,
+            page_title: document.title,
+            language: lang
+            });
+        }, { passive: true });
+        });
+    }
+
+    // Track clicks to the CV page
+    function bindViewCvTracking() {
+        document.querySelectorAll('a[href*="Curriculum.html"]').forEach(a => {
+        a.addEventListener('click', () => {
+            const lang = a.href.includes('/es/') ? 'es' :
+                        a.href.includes('/en/') ? 'en' : 'unknown';
+            gtag('event', 'view_cv_page', {
+            link_href: a.getAttribute('href'),
+            language: lang,
+            page_path: location.pathname
+            });
+        }, { passive: true });
+        });
+    }
+
+    // Init tracking when DOM is ready
+    function initTracking() {
+        bindCvDownloadTracking();
+        bindViewCvTracking();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initTracking);
+    } else {
+        initTracking();
+    }
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ángel Soto Boullosa - Ingeniero de Hardware (HW) y Software (SW)</title>
     <link href="../../styles/style.css" rel="stylesheet" type="text/css">
