@@ -108,25 +108,77 @@ main {
   padding: 100px 20px 40px; /* Adds padding to the main content */
 }
 
-/* Introduction section styles */
+.intro {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
 .intro h1 {
-  font-size: 2.5em; /* Sets the font size of the heading */
-  margin-bottom: 10px; /* Adds space below the heading */
+  font-size: 2.8em;
+  margin-bottom: 0.5rem;
 }
 
 .intro p {
-  font-size: 1.2em; /* Sets the font size of the paragraph */
-  color: #666; /* Sets a lighter grey text color */
+  font-size: 1.1em;
+  color: #444;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
 /* Styles for the About Me and CV sections */
-.about-me, .cv {
+.card {
   background: white; /* Sets the background to white */
   padding: 20px; /* Adds padding inside the section */
   margin: 20px auto; /* Adds margin around the section */
   max-width: 600px; /* Sets a maximum width for the section */
   border-radius: 10px; /* Rounds the corners of the section */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.skills, .contact ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.skills, .contact li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.projects ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.projects li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.projects li a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.projects li a:hover {
+    text-decoration: underline;
 }
 
 .profile-photo {
@@ -149,7 +201,7 @@ main {
 }
 
 .btn:hover {
-  background: #f4a261; /* Changes the background color on hover */
+  background: #007acc; /* Changes the background color on hover */
 }
 
 /* Footer styles */

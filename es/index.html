@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <!--
     @file index.html
     @brief Main webpage of Ángel Soto Boullosa - HW/SW Engineer.
-    
+
     This is the main page for Ángel Soto Boullosa's personal website. It includes navigation links to the curriculum and the home page.
-    
+
     @section header Header Section
     This section contains the navigation menu with links to the home page and the curriculum page.
 
@@ -16,62 +17,106 @@
     @section footer Footer Section
     The footer contains the copyright notice.
     -->
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ángel Soto Boullosa - Ingeniero de HW/SW</title>
+    <title>Ángel Soto Boullosa - Ingeniero de SW/FW</title>
     <link href="../styles/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <!-- Header section with navigation bar -->
     <header>
         <nav>
-            <!-- Navigation menu list -->
             <ul>
-                <li><a href="index.html">Página Principal</a></li>
-                <li><a href="../pages/es/Curriculum.html">Curriculum</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="../pages/es/Curriculum.html">Currículum</a></li>
             </ul>
-             <!-- Language Switch Button -->
-             <div class="language-selector">
+            <div class="language-selector">
                 <a href="../en/index.html"><img src="../images/uk-flag.png" alt="English" class="flag"></a>
                 <a href="index.html"><img src="../images/spain-flag.png" alt="Español" class="flag"></a>
             </div>
         </nav>
     </header>
-    
-    <!-- Main content section of the page -->
+
+    <!-- Main content section -->
     <main>
-        <!-- Introduction section with name and profession -->
         <section class="intro">
             <h1>Ángel Soto Boullosa</h1>
-
-            <!-- Imagen de perfil -->
-            <img src="../images/profile.jpeg" alt="Pefil de Angel Soto Boullosa" class="profile-photo">
-
-
-            <p><strong>Ingeniero de Hardware (HW) y Software (SW)</strong></p>
+            <img src="../images/profile.jpeg" alt="Foto de perfil de Ángel Soto Boullosa" class="profile-photo">
+            <p><strong>Ingeniero de Software (SW) y Firmware (FW)</strong></p>
         </section>
-        
-        <!-- "About Me" section -->
-        <section class="about-me">
-            <h2>Sobre mí</h2>
-            <p>Soy un ingeniero con experiencia en el desarrollo de soluciones tanto a nivel de hardware como de software. Me apasiona la tecnología y la optimización de procesos.</p>
-        </section>
-        
-        <!-- Curriculum section with download link and embedded PDF -->
-        <section class="cv">
-            <h2>Mi curriculum</h2>
-            <p>Puedes ver mi curriculum completo en el siguiente link:</p>
-            <a href="../pages/es/Curriculum.html" class="btn">Ver curriculum</a>
-            <p>O si lo prefierres lo puedes descargar directamente:</p>
-            <a href="../files/es/CV.pdf" download class="btn">Descargar CV</a>
-        </section>
+
+        <div class="grid-layout">
+            <!-- CV section -->
+            <section class="cv card">
+                <h2>Mi currículum</h2>
+                <p>Puedes ver mi currículum completo en el siguiente enlace:</p>
+                <a href="../pages/es/Curriculum.html" class="btn">Ver currículum</a>
+                <p>O si lo prefieres, puedes descargarlo directamente:</p>
+                <a href="../files/es/CV.pdf" download class="btn">Descargar CV</a>
+            </section>
+
+            <!-- About Me section -->
+            <section class="about-me card">
+                <h2>Sobre mí</h2>
+                <p>
+                    Soy un ingeniero especializado en sistemas embebidos, electrónica y desarrollo de software. 
+                    Valoro la honestidad, la fiabilidad y la mejora continua. Me gusta diseñar sistemas modulares, escalables y mantenibles 
+                    que combinan firmware, hardware y protocolos de comunicación.
+                </p>
+                <p>
+                    Actualmente trabajo en <a href="https://www.grupooesia.com/es/" target="_blank" rel="noopener noreferrer">Inster – Grupo Oesía</a>, desarrollando software embebido para equipos de telecomunicaciones 
+                    con requisitos de nivel militar. También exploro proyectos personales en robótica, automatización y sistemas autoalojados.
+                </p>
+            </section>
+
+            <!-- Skills section -->
+            <section class="skills card">
+                <h2>Tecnologías y herramientas</h2>
+                <ul>
+                    <li><strong>Lenguajes:</strong> C, Python, Shell scripting, C++</li>
+                    <li><strong>Plataformas:</strong> ESP32, STM32 (ARM Cortex-M), PIC18, AVR</li>
+                    <li><strong>OS / Frameworks:</strong> Linux, FreeRTOS</li>
+                    <li><strong>Herramientas:</strong> Git, VS Code, Altium, KiCad, Docker</li>
+                    <li><strong>Comunicación:</strong> UART, SPI, I2C, CAN, Bluetooth</li>
+                </ul>
+            </section>
+
+            <!-- Clean spacer section -->
+            <section class="clean">
+            </section>
+
+            <!-- Projects section -->
+            <section class="projects card">
+                <h2>Proyectos destacados</h2>
+                <ul>
+                    <li>
+                        <strong><a href="https://github.com/angelsotob/angelsoftworks-freertos-ecs" target="_blank">FreeRTOS ECS Template</a></strong>: 
+                        Plantilla modular para entornos de producción con FreeRTOS basada en separación por componentes.
+                    </li>
+                    <li>
+                        <strong><a href="https://github.com/angelsotob/C-Template" target="_blank">C Project Template</a></strong>: 
+                        Plantilla de proyecto en C, limpia y testeable, con pruebas unitarias y automatización de compilación.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Contact section -->
+            <section class="contact card">
+                <h2>Contacto</h2>
+                <p>Puedes contactarme a través de las siguientes plataformas:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:angelsotob@outlook.es">angelsotob@outlook.es</a></li>
+                    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/angel-soto-boullosa/" target="_blank" rel="noopener noreferrer">linkedin.com/in/angel-soto-boullosa</a></li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/angelsotob" target="_blank" rel="noopener noreferrer">github.com/angelsotob</a></li>
+                </ul>
+            </section>
+        </div>
     </main>
-    
-    <!-- Footer section with copyright information -->
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Ángel Soto Boullosa</p>
     </footer>
 </body>
 </html>
- 

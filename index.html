@@ -109,23 +109,74 @@
             <!-- Profile photo -->
             <img src="images/profile.jpeg" alt="Profile of Angel Soto Boullosa" class="profile-photo">
 
-            <p><strong>Hardware (HW) and Software (SW) Engineer</strong></p>
+            <p><strong>Software (SW) and Firmware (FW) Engineer</strong></p>
         </section>
-        
-        <!-- "About Me" section -->
-        <section class="about-me">
-            <h2>About Me</h2>
-            <p>I am an engineer with experience in developing solutions both at the hardware and software level. I am passionate about technology and process optimization.</p>
-        </section>
-        
-        <!-- Curriculum section with download link and embedded PDF -->
-        <section class="cv">
-            <h2>My Curriculum</h2>
-            <p>You can view my full CV in the following link:</p>
-            <a href="pages/en/Curriculum.html" class="btn">View Curriculum</a>
-            <p>Or if you prefer, you can download it directly:</p>
-            <a href="files/en/CV.pdf" download class="btn">Download CV</a>
-        </section>
+        <div class="grid-layout">
+            <!-- Curriculum section with download link and embedded PDF -->
+            <section class="cv card">
+                <h2>My Curriculum</h2>
+                <p>You can view my full CV in the following link:</p>
+                <a href="pages/en/Curriculum.html" class="btn">View Curriculum</a>
+                <p>Or if you prefer, you can download it directly:</p>
+                <a href="files/en/CV.pdf" download class="btn">Download CV</a>
+            </section>
+
+            <!-- "About Me" section -->
+            <section class="about-me card">
+                <h2>About Me</h2>
+                <p>
+                    I am an engineer specialized in electronics, embedded systems and software development. 
+                    I value honesty, reliability and continuous improvement. I enjoy designing modular, scalable and maintainable systems 
+                    that combine firmware, hardware and communication protocols.
+                </p>
+                <p>
+                    Currently, I work at <a href="https://www.grupooesia.com/en/" target="_blank" rel="noopener noreferrer">Inster – Grupo Oesía</a>, where I develop embedded software for telecommunications equipment 
+                    with military-grade requirements. I'm also exploring personal projects in robotics, automation and self-hosted systems.
+                </p>
+            </section>
+
+            <!-- Technologies and tools section -->
+            <section class="skills card">
+                <h2>Technologies & Tools</h2>
+                <ul>
+                    <li><strong>Programming:</strong> C, Python, Shell scripting, C++</li>
+                    <li><strong>Platforms:</strong> ESP32, STM32 (ARM Cortex-M), PIC18, AVR</li>
+                    <li><strong>OS / Frameworks:</strong> Linux, FreeRTOS</li>
+                    <li><strong>Tools:</strong> Git, VS Code, Altium, KiCad, Docker</li>
+                    <li><strong>Communication:</strong> UART, SPI, I2C, CAN, Bluetooth</li>
+                </ul>
+            </section>
+            
+            <!-- "Clean" section -->
+            <section class="clean">
+            </section>
+
+            <!-- Featured Projects section -->
+            <section class="projects card">
+                <h2>Featured Projects</h2>
+                <ul>
+                    <li>
+                        <strong><a href="https://github.com/angelsotob/angelsoftworks-freertos-ecs" target="_blank">FreeRTOS ECS Template</a></strong>: 
+                        A modular FreeRTOS template for embedded production environments based on entity-component separation.
+                    </li>
+                    <li>
+                        <strong><a href="https://github.com/angelsotob/C-Template" target="_blank">C Project Template</a></strong>: 
+                        A clean, testable C template with unit testing and build automation.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Contact section -->
+            <section class="contact card">
+                <h2>Contact</h2>
+                <p>You can reach me through any of the following platforms:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:angelsotob@outlook.es">angelsotob@outlook.es</a></li>
+                    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/angel-soto-boullosa/" target="_blank" rel="noopener noreferrer">linkedin.com/in/angel-soto-boullosa</a></li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/angelsotob" target="_blank" rel="noopener noreferrer">github.com/angelsotob</a></li>
+                </ul>
+            </section>
+        </div>
     </main>
     
     <!-- Footer section with copyright information -->
