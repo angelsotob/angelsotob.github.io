@@ -147,16 +147,18 @@ main {
   transform: translateY(-5px);
 }
 
-.skills, .contact ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
+.skills ul,
+.contact ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
-.skills, .contact li {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    line-height: 1.5;
+.skills li,
+.contact li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .projects ul {
